@@ -1,6 +1,6 @@
 # SPI Telemetry Framework
 In many Embedded system applications, some kind of robust and fast connection between different processing systems is required. SPI(<a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface" target="_blank"> Serial Peripheral Interface</a>) is a good candidate for this purpose. However, the STM32 HAL Library provides no clear and robust way of employing this. In fact the API provided by this library is too vague and as such, implementing a custom slave interface using it was too hard. 
 Therefore, I used the dear old Resister level programming paradigm and created this library. There are two implementations in this repository, the first one employs the interrupt capability and using it provides and Address/Access based interface to the microcontroller. The way that it communicates is pretty much like standard SPI sensors (for example MPU9250). The other interface exploits the DMA capability of the microcontroller and provides a fast burst mode connection to the system. However, this paradigm dose not support any addressing scheme.
-##Repository structure
+## Repository structure
 -	Libs: The STM32 library and an Embedded linux based SPI master class to communicate with the microcontroller
 -	examples: Contains an example project using this library.
